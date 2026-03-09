@@ -1,0 +1,27 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #2d0303;
+    border-radius: 5px;
+    text-align: center;
+}
+.header{
+    text-align: center;
+    background:#794527;
+    color:white;
+}
+.footer{
+    text-align: center;
+    margin-top: 20px;
+   background:#403421;
+    color:white;
+}
+body{
+    background-color: #ccc;
+}
