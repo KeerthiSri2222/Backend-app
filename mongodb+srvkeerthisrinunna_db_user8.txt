@@ -1,1 +1,1 @@
-mongodb+srv://keerthisrinunna_db_user:85rurokRujkVqKr2@cluster0.lqf2aso.mongodb.net/?appName=Cluster0
+mongodb+srv://keerthisrinunna_db_user:85rurokRujkVqKr2@cluster0.lqf2aso.mongodb.net/myappdb?appName=Cluster0
