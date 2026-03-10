@@ -1,6 +1,10 @@
 import express from "express";
-import { showproduct } from "../controllers/productcontroller"; 
-const productrouter=express.Router();
-productrouter.get("/",showproduct)   
-
-export {productrouter}
+import { getproducts,addProductForm,addProduct,deleteProduct,editProductForm,saveProduct } from "../controllers/productController.js"; 
+const productRouter=express.Router();
+productRouter.get("/",getproducts)   
+productRouter.get("/add",addProductForm)
+productRouter.post("/add",addProduct)
+productRouter.get("/:id/delete",deleteProduct)
+productRouter.get("/:id/edit", editProductForm) 
+productRouter.post("/:id/save", saveProduct)
+export { productRouter };
