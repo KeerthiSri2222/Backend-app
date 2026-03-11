@@ -9,11 +9,10 @@
     <h2>Product Edit Form</h2>
     <form action="/products/<%= product._id %>/save" method="POST">
         <p><input type="text" name="name" value="<%= product.name %>"></p>
-        <p><input type="text" name="desc" value="<%= product.desc %>"></p>
         <p><input type="number" name="price" value="<%= product.price %>"></p>
-        <p><input type="text" name="imageUrl" value="<%= product.imageUrl %>"></p>
-        <input type="hidden" name="id" value="<%= product._id %>">
-        <button type="submit">Save</button>
+        <p><input type="text" name="desc" value="<%= product.desc %>"></p>
+        <p><input type="text" name="imageUrl"  value="<%= product.imageUrl %>"></p>
+        <p><button>Save</button></p>
     </form>
 </body>
 </html>

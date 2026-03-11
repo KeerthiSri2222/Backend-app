@@ -1,12 +1,19 @@
-import express from "express"
-import { showUsers,addUserPage,addUser,editUserPage,updateUser,deleteUser } from "../controllers/userController.js";
-const userRouter = express.Router()
+import {
+  getusers,
+  adduserForm,
+  adduser,
+  deleteuser,
+  edituserForm,
+  saveuser,
+} from "../controllers/userController.js";
+import express from "express";
+const userRouter = express.Router();
 
-userRouter.get("/",showUsers)
-userRouter.get("/add",addUserPage)
-userRouter.post("/add",addUser)
-userRouter.get("/edit/:id",editUserPage)
-userRouter.post("/edit/:id",updateUser)
-userRouter.post("/delete/:id",deleteUser)
+userRouter.get("/", getusers);
+userRouter.get("/add", adduserForm);
+userRouter.post("/add", adduser);
+userRouter.get("/:id/delete", deleteuser);
+userRouter.get("/:id/edit", edituserForm);
+userRouter.post("/:id/save", saveuser);
 
-export {userRouter}
+export default userRouter;
