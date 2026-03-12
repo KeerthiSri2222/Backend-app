@@ -25,7 +25,7 @@ body{
 /* Header */
 
 .header{
-    background:#5c3d2e;
+    background:#329aef;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -43,10 +43,11 @@ body{
 .header li{
     display:inline-block;
     margin:0 10px;
+    color: black;
 }
 
 .header a{
-    color:white;
+    color:black;
     text-decoration:none;
     font-weight:bold;
 }
@@ -97,7 +98,7 @@ body{
 .footer{
     text-align:center;
     padding:1rem 0;
-    background:#da8d7f;
-    color:white;
+    background:#a2e4ef;
+    color:black;
     margin-top:auto;
 }

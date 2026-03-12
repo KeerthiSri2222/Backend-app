@@ -32,10 +32,17 @@ const registerUser = async (req, res) => {
 
 const signup = async (req, res) => {
   const { name, email, password } = req.body;
+
   const hashedPassword = await bcrypt.hash(password, 10);
-  password = hashedPassword;
-  await userModel.create({ name, email, password: hashedPassword });
-  res.json({ message: "User Created" });
+
+  const user = await userModel.create({
+    name,
+    email,
+    password: hashedPassword,
+    role: "user"
+  });
+
+  res.json({ message: "User Created", user });
 };
 
 const logout = (req, res) => {
@@ -44,4 +51,4 @@ const logout = (req, res) => {
   res.render("auth/login");
 };
 
-export { login, validateUser, register, registerUser, logout };
+export { login, validateUser, register, registerUser, signup,logout };
